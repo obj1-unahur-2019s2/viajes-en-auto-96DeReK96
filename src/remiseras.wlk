@@ -36,6 +36,22 @@ object teresa {
 	}
 }
 
+object lucia {
+	var property reemplazaActual
+	
+	method reemplazaA(remisera) {
+		reemplazaActual = remisera
+	}
+	method reemplazoActual() {
+		return reemplazaActual
+	}
+	method precioPorKilometro() {
+		return reemplazaActual.precioPorKilometro()
+	}
+	
+}
+
+
 object roxana {
 	method precioDelViaje(cliente, kms) {
 		return cliente.precioPorKilometro() * kms
@@ -52,4 +68,18 @@ object mariela {
 	method precioDelViaje (cliente, kms) {
 		return (cliente.precioPorKilometro() * kms).max(50)
 	}
+}
+
+object juana {
+	method precioDelViaje (cliente, kms) {
+		return if (kms < 8) {
+			100
+		} else {
+			200
+		}
+	}
+}
+
+object melina {
+	var
 }
